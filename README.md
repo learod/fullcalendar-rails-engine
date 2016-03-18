@@ -2,6 +2,8 @@
 
 ## This engine supports only Rails 4 apps.
 
+It also supports only fullcalendar v1: http://fullcalendar.io/docs1/
+
 ### Installation
 
 Add fullcalendar_engine to your Gemfile:
@@ -49,7 +51,7 @@ FullcalendarEngine::EventSeries.create({
 mount_path: "<path you have mounted your engine on>"
 ```
 
-The engine can have its own layout, you can add `layout` option to the configuration file. Besides this, all the options which are available with the fullcalendar.js are listed in the *`full-calendar.yml.dummy`* file.  (Note that the file needs to be at `config/fullcalendar.yml` with no dashes, and that if you are modifying this file, you have to edit `GEMPATH/app/assets/javascripts/fullcalendar_engine/events.js.erb` to get changes to show up` and force a reload of that page.)
+The engine can have its own layout, you can add `layout` option to the configuration file. Besides this, all the options which are available with the fullcalendar.js are listed in the *`full-calendar.yml.dummy`* file.  (Note that the file needs to be at `config/fullcalendar.yml` with no dashes, and that if you are modifying this file, you have to edit `GEMPATH/app/assets/javascripts/fullcalendar_engine/events.js.erb` to get changes to show up`, and restart the server.)
 
 ## Using the Engine in some other views
 Initially the engine is designed to work only on the mount point but you can now use this engine anywhere in your app but there is an HTML structure which this engine expects. 
