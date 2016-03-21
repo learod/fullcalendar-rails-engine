@@ -18,7 +18,8 @@ module FullcalendarEngine
 
     def new
       respond_to do |format|
-        format.js
+        # http://stackoverflow.com/questions/6919801/jquery-ajax-request-not-triggering-js-response-from-rails-controller
+        format.js {render :layout => false }
       end
     end
 
