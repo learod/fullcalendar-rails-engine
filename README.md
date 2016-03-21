@@ -4,6 +4,8 @@
 
 It also supports only fullcalendar v1: http://fullcalendar.io/docs1/
 
+This also is a custom hacked version which integrates with an existing rails app.  YMMV.
+
 ### Installation
 
 Add fullcalendar_engine to your Gemfile:
