@@ -58,7 +58,7 @@ FullcalendarEngine = {
         async: true,
         url: FullcalendarEngine.app_path() + "/events/new",
         success: function(){ FullcalendarEngine.Form.render(options) },
-        error: function(err){ console.log("error, but hacking through: "); eval(err); FullcalendarEngine.Form.render(options) 
+        error: function(err){ console.log("error, but hacking through: "); eval(err); FullcalendarEngine.Form.render(options) }
       });
     },
     authenticity_token: function(){
