@@ -31,7 +31,7 @@ module FullcalendarEngine
           e.attributes = event
           if event_series.period.downcase == 'monthly' or event_series.period.downcase == 'yearly'
             new_start_time = make_date_time(e.starttime, old_start_time) 
-            new_end_time   = make_date_time(e.starttime, old_end_time, e.endtime)
+            new_end_time   = make_date_time(e.endtime, old_end_time, e.endtime)
           else
             new_start_time = make_date_time(e.starttime, old_end_time)
             new_end_time   = make_date_time(e.endtime, old_end_time)
