@@ -8,10 +8,9 @@ module FullcalendarEngine
         require_dependency(c)
       end
       # make sure our assets are added to the asset pipeline, per https://gist.github.com/parndt/11381872
-
-      Rails.application.config.assets.precompile += %w(
-        fullcalendar_engine/*
-      )
+      #Rails.application.config.assets.precompile += %w(
+        #fullcalendar_engine/*
+      #)
     end
 
   end
