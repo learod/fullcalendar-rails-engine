@@ -10,7 +10,7 @@ module FullcalendarEngine
 
     def create
       if @event.save
-        render nothing: true
+        head :ok
       else
         render text: @event.errors.full_messages.to_sentence, status: 422
       end
@@ -53,15 +53,15 @@ module FullcalendarEngine
         @event.all_day   = params[:all_day]
         @event.save
       end
-      render nothing: true
+      head :ok
     end
 
     def resize
       if @event
         @event.endtime = make_time_from_minute_and_day_delta(@event.endtime)
         @event.save
-      end    
-      render nothing: true
+      end
+      head :ok
     end
 
     def edit
@@ -81,7 +81,7 @@ module FullcalendarEngine
         @event.attributes = event_params
         @event.save
       end
-      render nothing: true
+      head :ok
     end
 
     def destroy
@@ -95,7 +95,7 @@ module FullcalendarEngine
       else
         @event.destroy
       end
-      render nothing: true
+      head :ok
     end
 
     private
