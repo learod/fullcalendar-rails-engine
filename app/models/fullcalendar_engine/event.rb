@@ -6,7 +6,7 @@ module FullcalendarEngine
     validates :title, :description, :starttime, :endtime, :presence => true
     validate :validate_timings
 
-    belongs_to :event_series
+    belongs_to :event_series, optional: true
 
     REPEATS = {
       :no_repeat => "Does not repeat",
